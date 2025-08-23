@@ -72,7 +72,7 @@
     "TEXT_LINK": ["#9d303e"],
     "TEXT_MUTED": ["#e2dfef66"],
     "TEXT_NORMAL": ["#e2dfef"],
-    "TEXT_PRIMARY": ["#f5f2ff"],
+    "TEXT_PRIMARY": ["#000000"],
     "TEXT_SECONDARY": ["#b8b4d0"],
     "BG_MOD_FAINT": ["hsla(250, 20%, 30%, 0.1)"],
     "KEYBOARD": ["#35344c"],
