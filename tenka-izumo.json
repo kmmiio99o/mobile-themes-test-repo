@@ -216,11 +216,6 @@
     "WHITE_500": "#d6bee2",
     "WHITE_630": "#a895b5"
   },
-  "background": {
-    "url": "https://i.imgur.com/g5K66VK.png",
-    "OPACITY": 40,
-    "blur": 0
-  },
   "plus": {
     "version": "0",
     "iconPack": "rosiecord-plumpy",
