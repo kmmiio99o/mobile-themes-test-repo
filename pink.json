@@ -79,7 +79,9 @@
     "BACKGROUND_MODIFIER_ACCEPT": ["#b83a6b33"],
     "BACKGROUND_MODIFIER_ACCEPT_HOVER": ["#b83a6b4d"],
     "AUTOMOD_QUEUED_FOR_REVIEW_BACKGROUND": ["#ff4d9433"],
-    "AUTOMOD_QUEUED_FOR_REVIEW_BACKGROUND_HOVER": ["#ff4d944d"]
+    "AUTOMOD_QUEUED_FOR_REVIEW_BACKGROUND_HOVER": ["#ff4d944d"],
+    "CHANNEL_TEXT_AREA_PLACEHOLDER": ["#e6c3d699"],
+    "INPUT_PLACEHOLDER_TEXT": ["#e6c3d699"]
   },
   "rawColors": {
     "BLUE_260": "#d46a9e",
@@ -166,7 +168,7 @@
     "GREEN_700": "#b83a6b",
     "GUILD_BOOSTING_PINK": "#ffa6cb",
     "GUILD_BOOSTING_PURPLE": "#ffa6cb",
-    "GUILD_BOOSTING_PURPLE_FOR_GRADIENS": "#ffa6cb",
+    "GUILD_BOOSTING_PURPLE_FOR_GRADIENTS": "#ffa6cb",
     "RED_260": "#d44d76",
     "RED_300": "#d44d76",
     "RED_330": "#d44d76",
@@ -214,7 +216,9 @@
     "YELLOW_660": "#d46a9e",
     "YELLOW_700": "#d46a9e",
     "WHITE_500": "#ffa6cb",
-    "WHITE_630": "#e6c3d6"
+    "WHITE_630": "#e6c3d6",
+    "INPUT_TEXT_COLOR": "#e6c3d6",
+    "INPUT_PLACEHOLDER": "#e6c3d699"
   },
   "background": {
     "blur": 0.1,
