@@ -10,7 +10,7 @@
   ],
   "semanticColors": {
     "ANDROID_RIPPLE": ["#ffb6d5"],
-    "CHAT_BACKGROUND": ["#ffecf5"],
+    "CHAT_BACKGROUND": ["#f5ebf2"],
     "BACKGROUND_ACCENT": ["#ffd1e6"],
     "BACKGROUND_FLOATING": ["#ffe6f2"],
     "BACKGROUND_MENTIONED": ["#ffb6d533"],
@@ -32,7 +32,7 @@
     "BACKGROUND_MODIFIER_HOVER": ["hsla(333, 100%, 95%, 0.3)"],
     "BACKGROUND_MODIFIER_SELECTED": ["hsla(333, 100%, 90%, 0.5)"],
     "BACKGROUND_PRIMARY": ["#fff5f9"],
-    "BACKGROUND_SECONDARY": ["#ffecf5"],
+    "BACKGROUND_SECONDARY": ["#f5ebf2"],
     "BACKGROUND_SECONDARY_ALT": ["#ffe6f2"],
     "BACKGROUND_TERTIARY": ["#ffd1e6"],
     "BG_BASE_PRIMARY": ["#fff5f9"],
