@@ -216,6 +216,11 @@
     "WHITE_500": "#ffa6cb",
     "WHITE_630": "#e6c3d6"
   },
+  "background": {
+    "blur": 0.1,
+    "url": "https://kmmiio99o.pages.dev/theme-images/pink.jpg",
+    "OPACITY": 0
+  },
   "plus": {
     "version": "0",
     "iconPack": "",
