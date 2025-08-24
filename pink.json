@@ -10,7 +10,7 @@
   ],
   "semanticColors": {
     "ANDROID_RIPPLE": ["#d46a9e"],
-    "CHAT_BACKGROUND": ["#2a1a25"],
+    "CHAT_BACKGROUND": ["#1F131B"],
     "BACKGROUND_ACCENT": ["#b83a6b"],
     "BACKGROUND_FLOATING": ["#35222d"],
     "BACKGROUND_MENTIONED": ["#b83a6b33"],
@@ -79,9 +79,7 @@
     "BACKGROUND_MODIFIER_ACCEPT": ["#b83a6b33"],
     "BACKGROUND_MODIFIER_ACCEPT_HOVER": ["#b83a6b4d"],
     "AUTOMOD_QUEUED_FOR_REVIEW_BACKGROUND": ["#ff4d9433"],
-    "AUTOMOD_QUEUED_FOR_REVIEW_BACKGROUND_HOVER": ["#ff4d944d"],
-    "CHANNEL_TEXT_AREA_PLACEHOLDER": ["#e6c3d699"],
-    "INPUT_PLACEHOLDER_TEXT": ["#e6c3d699"]
+    "AUTOMOD_QUEUED_FOR_REVIEW_BACKGROUND_HOVER": ["#ff4d944d"]
   },
   "rawColors": {
     "BLUE_260": "#d46a9e",
@@ -216,9 +214,7 @@
     "YELLOW_660": "#d46a9e",
     "YELLOW_700": "#d46a9e",
     "WHITE_500": "#ffa6cb",
-    "WHITE_630": "#e6c3d6",
-    "INPUT_TEXT_COLOR": "#e6c3d6",
-    "INPUT_PLACEHOLDER": "#e6c3d699"
+    "WHITE_630": "#e6c3d6"
   },
   "plus": {
     "version": "0",
