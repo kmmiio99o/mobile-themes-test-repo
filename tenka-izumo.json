@@ -217,7 +217,7 @@
     "WHITE_630": "#a895b5"
   },
   "background": {
-    "blur": 1.7,
+    "alpha": 1,
     "url": "https://kmmiio99o.pages.dev/background/test.png",
     "OPACITY": 30
   },
