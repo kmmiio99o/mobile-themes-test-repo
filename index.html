@@ -23,7 +23,6 @@
             }
 
             .dark-mode {
-                /* This is the default — no need to override :root */
             }
 
             .light-mode {
@@ -284,11 +283,11 @@
             const GITHUB_REPO = "mobile-themes-test-repo";
             const REPO_PATH = "";
             const BRANCH = "main";
-            const UPDATE_INTERVAL = 3 * 60 * 60 * 1000; // 3 hours
+            const UPDATE_INTERVAL = 3 * 60 * 60 * 1000;
 
             const API_URL = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${REPO_PATH}?ref=${BRANCH}`;
             const CACHE_KEY = "themes_cache_v3";
-            const MODE_KEY = "user_theme_mode_v1"; // Save preference
+            const MODE_KEY = "user_theme_mode_v1";
 
             const fileListEl = document.getElementById("file-list");
             const timeEl = document.getElementById("update-time");
@@ -313,15 +312,15 @@
             // Load saved preference
             const savedMode = localStorage.getItem(MODE_KEY);
             if (savedMode === "light") {
-                setTheme(true); // Start in light
+                setTheme(true);
             } else {
-                setTheme(false); // Default: dark
+                setTheme(false);
             }
 
             // Toggle on click
             darkModeToggle.addEventListener("click", () => {
                 const isLight = document.body.classList.contains("light-mode");
-                setTheme(!isLight); // Switch to opposite
+                setTheme(!isLight);
             });
 
             // === GET DESCRIPTION FROM JSON ===
