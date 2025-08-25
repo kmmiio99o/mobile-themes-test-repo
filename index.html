@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Auto-Refresh Themes Files Monitor</title>
+        <style>
+            body {
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                background-color: #f4f6f8;
+                color: #333;
+                padding: 20px;
+            }
+            h1 {
+                color: #2c3e50;
+                text-align: center;
+            }
+            #file-list {
+                margin: 20px auto;
+                max-width: 800px;
+                background: #fff;
+                padding: 15px;
+                border-radius: 8px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            }
+            .file-item {
+                padding: 8px;
+                margin: 5px 0;
+                background: #f0f7ff;
+                border-left: 4px solid #3498db;
+                word-break: break-all;
+            }
+            .timestamp {
+                text-align: center;
+                color: #7f8c8d;
+                font-size: 0.9em;
+                margin-top: 10px;
+            }
+            .loading {
+                text-align: center;
+                color: #95a5a6;
+                font-style: italic;
+            }
+        </style>
+        <title>Themes File Monitor</title>
+    </head>
+    <body>
+        <h1>🔍 Themes Files Monitor</h1>
+        <p style="text-align: center">Refreshing every 30 seconds...</p>
+        <div id="file-list">
+            <p class="loading">Loading Themes files...</p>
+        </div>
+        <p class="timestamp" id="update-time"></p>
+
+        <script>
+            // CONFIG: Replace with your GitHub username, repo, and path (use empty string for root)
+            const GITHUB_USER = "your-username"; // e.g., 'facebook'
+            const GITHUB_REPO = "your-repo-name"; // e.g., 'react'
+            const REPO_PATH = ""; // e.g., 'examples' or '' for root
+            const BRANCH = "main"; // or 'master'
+
+            // GitHub API URL for repository contents
+            const API_URL = `https://api.github.com/repos/${GITHUB_USER}/${GITHUB_REPO}/contents/${REPO_PATH}?ref=${BRANCH}`;
+
+            // Function to fetch and display JSON files
+            async function fetchJsonFiles() {
+                const fileListEl = document.getElementById("file-list");
+                const timeEl = document.getElementById("update-time");
+
+                try {
+                    const response = await fetch(API_URL);
+
+                    if (!response.ok) {
+                        throw new Error(`GitHub API error: ${response.status}`);
+                    }
+
+                    const data = await response.json();
+
+                    // Filter for .json files
+                    const jsonFiles = data.filter(
+                        (item) =>
+                            item.type === "file" &&
+                            item.name.toLowerCase().endsWith(".json"),
+                    );
+
+                    // Display results
+                    if (jsonFiles.length > 0) {
+                        fileListEl.innerHTML = "";
+                        jsonFiles.forEach((file) => {
+                            const fileEl = document.createElement("div");
+                            fileEl.className = "file-item";
+                            fileEl.innerHTML = `
+              <strong>${file.name}</strong><br>
+              <small>Size: ${(file.size / 1024).toFixed(2)} KB |
+              <a href="${file.download_url}" target="_blank">Download</a> |
+              <a href="${file.html_url}" target="_blank">View on GitHub</a></small>
+            `;
+                            fileListEl.appendChild(fileEl);
+                        });
+                    } else {
+                        fileListEl.innerHTML =
+                            "<p>No .json files found in the repository.</p>";
+                    }
+
+                    // Update timestamp
+                    timeEl.textContent = `Last updated: ${new Date().toLocaleString()}`;
+                } catch (error) {
+                    fileListEl.innerHTML = `<p style="color:red;">Error: ${error.message}</p>`;
+                    timeEl.textContent = `Failed to update at ${new Date().toLocaleString()}`;
+                }
+            }
+
+            // Initial load
+            fetchJsonFiles();
+
+            // Auto-refresh every 30 seconds
+            setInterval(fetchJsonFiles, 30000);
+        </script>
+    </body>
+</html>
