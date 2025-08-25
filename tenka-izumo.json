@@ -219,7 +219,7 @@
   "background": {
     "blur": 0.6,
     "url": "https://kmmiio99o.pages.dev/background/test.png",
-    "OPACITY": 300
+    "alpha": 0.7
   },
   "plus": {
     "version": "0",
